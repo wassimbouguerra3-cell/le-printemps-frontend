@@ -6,7 +6,7 @@
 <title>Superette le Printemps – la qualité avant tout !</title>
 <meta name="description" content="Superette le Printemps – produits frais, épicerie fine, qualité premium en Algérie."/>
 <link rel="icon" type="image/png" href="https://res.cloudinary.com/duh0wcqkq/image/upload/v1776389937/597415249_1630003911169646_1169100098553819397_n_hlv6ip.jpg">
-<!-- Anti-FOUC: apply saved theme before first paint -->
+
 <script>
   (function(){
     if(localStorage.getItem('lp-theme')==='dark'){
@@ -15,21 +15,17 @@
   })();
 </script>
 
-<!-- Fonts -->
+
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Tajawal:wght@300;400;500;700;900&family=Cormorant+Garamond:ital,wght@0,600;1,400&display=swap" rel="stylesheet"/>
 
-<!-- AOS -->
 <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
 
-<!-- Lucide Icons -->
 <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 
 <style>
-/* ============================================================
-   ROOT & TOKENS
-   ============================================================ */
+
 :root {
   --red:        #CC1919;
   --red-dark:   #A01212;
@@ -66,16 +62,11 @@ body {
   line-height: 1.6;
 }
 
-/* ============================================================
-   SCROLLBAR
-   ============================================================ */
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: var(--white); }
 ::-webkit-scrollbar-thumb { background: var(--red); border-radius: 3px; }
 
-/* ============================================================
-   UTILITIES
-   ============================================================ */
+
 .container { width: 92%; max-width: 1280px; margin: 0 auto; }
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }
 
@@ -85,9 +76,7 @@ body {
   border-radius: 2px; margin: 12px auto 0;
 }
 
-/* ============================================================
-   NAVBAR
-   ============================================================ */
+
 #navbar {
   position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
   height: var(--nav-h);
@@ -107,7 +96,6 @@ body {
   gap: 16px; width: 100%;
 }
 
-/* LOGO */
 .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; flex-shrink: 0; }
 .nav-logo-img-wrap {
   width: 52px; height: 52px; border-radius: 50%;
@@ -121,7 +109,6 @@ body {
 .nav-logo-text .brand span { color: var(--red); }
 .nav-logo-text .sub { font-size: 0.65rem; color: var(--gold); letter-spacing: 0.08em; text-transform: uppercase; }
 
-/* NAV LINKS */
 .nav-links {
   display: flex; align-items: center; gap: 4px;
   list-style: none; flex: 1; justify-content: center; flex-wrap: wrap;
@@ -140,7 +127,7 @@ body {
 .nav-links a:hover { color: var(--red); }
 .nav-links a:hover::after { left: 10%; right: 10%; }
 
-/* NAV CTA */
+
 .nav-cta-wrap { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
 #cart-btn {
   display: flex; align-items: center; gap: 6px;
@@ -163,11 +150,10 @@ body {
 #cart-count.bump { animation: bump 0.3s ease; }
 @keyframes bump { 0%,100% { transform: scale(1); } 50% { transform: scale(1.4); } }
 
-/* HAMBURGER */
 .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
 .hamburger span { display: block; width: 24px; height: 2px; background: var(--gray-800); margin: 5px 0; border-radius: 2px; transition: all 0.3s; }
 
-/* MOBILE NAV */
+
 .mobile-nav {
   display: none; position: fixed; top: var(--nav-h); left: 0; right: 0; z-index: 999;
   background: white; padding: 16px 24px 24px;
@@ -181,9 +167,7 @@ body {
 }
 .mobile-nav a:hover { color: var(--red); }
 
-/* ============================================================
-   HERO
-   ============================================================ */
+
 #hero {
   min-height: 100vh;
   padding-top: var(--nav-h);
@@ -194,7 +178,6 @@ body {
   position: relative;
 }
 
-/* decorative circles */
 #hero::before {
   content: ''; position: absolute;
   width: 700px; height: 700px; border-radius: 50%;
@@ -275,7 +258,6 @@ body {
 }
 .btn-outline:hover { border-color: var(--green); color: var(--green); }
 
-/* Hero stats */
 .hero-stats {
   display: flex; gap: 32px; margin-top: 48px; padding-top: 32px;
   border-top: 1px solid var(--gray-200);
@@ -287,7 +269,7 @@ body {
 }
 .stat-label { font-size: 0.78rem; color: var(--gray-500); margin-top: 4px; }
 
-/* Hero image */
+
 .hero-visual {
   position: relative; display: flex; align-items: center; justify-content: center;
 }
@@ -325,9 +307,7 @@ body {
   50% { transform: translateY(-8px); }
 }
 
-/* ============================================================
-   MARQUEE RIBBON
-   ============================================================ */
+
 .marquee-ribbon {
   background: linear-gradient(90deg, var(--red-dark), var(--red), var(--red-dark));
   color: white; padding: 14px 0; overflow: hidden;
@@ -346,9 +326,7 @@ body {
 .marquee-item .dot { width: 6px; height: 6px; background: var(--gold); border-radius: 50%; }
 @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
-/* ============================================================
-   SECTION HEADERS
-   ============================================================ */
+
 .section-header { text-align: center; margin-bottom: 56px; }
 .section-eyebrow {
   display: inline-flex; align-items: center; gap: 8px;
@@ -366,9 +344,7 @@ body {
 }
 .section-title .accent { color: var(--red); }
 
-/* ============================================================
-   PRODUCT SECTIONS
-   ============================================================ */
+
 .product-section { padding: 100px 0; }
 .product-section:nth-child(even) { background: var(--off-white); }
 .product-section:nth-child(odd) { background: var(--white); }
@@ -379,7 +355,7 @@ body {
   gap: 28px;
 }
 
-/* PRODUCT CARD */
+
 .product-card {
   background: white;
   border-radius: var(--radius);
@@ -403,14 +379,13 @@ body {
   overflow: hidden;
   position: relative;
   background: linear-gradient(135deg, var(--cream), var(--gray-100));
-  /* fallback للمتصفحات القديمة */
   min-height: 160px;
 }
 
 /* الصورة تملأ الإطار دائماً بغض النظر عن أبعادها الأصلية */
 .product-card-img img {
   position: absolute;
-  inset: 0;                  /* top:0 right:0 bottom:0 left:0 */
+  inset: 0;                 
   width: 100%;
   height: 100%;
   object-fit: cover;         /* يقص الزيادة ويملأ الإطار */
@@ -419,7 +394,7 @@ body {
   display: block;
 }
 
-/* إذا فشل تحميل الصورة — يظهر placeholder أنيق */
+
 .product-card-img img::after {
   content: '🖼️';
   position: absolute;
@@ -475,7 +450,7 @@ body {
 }
 .add-btn svg { width: 14px; height: 14px; }
 
-/* GOLD FLASH on scroll */
+
 .gold-flash-trigger.aos-animate .product-card:nth-child(1) { animation: goldFlash 0.6s ease 0.1s; }
 .gold-flash-trigger.aos-animate .product-card:nth-child(2) { animation: goldFlash 0.6s ease 0.2s; }
 .gold-flash-trigger.aos-animate .product-card:nth-child(3) { animation: goldFlash 0.6s ease 0.3s; }
@@ -489,9 +464,7 @@ body {
   100% { box-shadow: var(--shadow-sm); }
 }
 
-/* ============================================================
-   TESTIMONIALS
-   ============================================================ */
+
 #testimonials { padding: 100px 0; background: linear-gradient(160deg, var(--cream) 0%, var(--white) 100%); }
 .testimonials-grid {
   display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 28px;
@@ -523,9 +496,7 @@ body {
 .testimonial-loc { font-size: 0.75rem; color: var(--gray-500); }
 .stars { color: var(--gold); font-size: 0.85rem; margin-bottom: 2px; }
 
-/* ============================================================
-   LIST MANAGER SECTION
-   ============================================================ */
+
 #list-manager {
   padding: 100px 0;
   background: linear-gradient(135deg, var(--gray-800) 0%, #111 100%);
@@ -637,9 +608,7 @@ body {
 }
 .clear-btn:hover { border-color: var(--red); color: var(--red); }
 
-/* ============================================================
-   TOAST
-   ============================================================ */
+
 #toast {
   position: fixed; bottom: 32px; left: 50%; transform: translateX(-50%) translateY(100px);
   background: var(--gray-800); color: white;
@@ -654,9 +623,6 @@ body {
 #toast.show { transform: translateX(-50%) translateY(0); }
 #toast.gold { border-right-color: var(--gold); }
 
-/* ============================================================
-   FOOTER
-   ============================================================ */
 footer {
   background: #0D0D0D; color: rgba(255,255,255,0.6);
   padding: 64px 0 32px;
@@ -695,9 +661,7 @@ footer {
 }
 .footer-bottom .gold { color: var(--gold); }
 
-/* ============================================================
-   SCROLL TO TOP
-   ============================================================ */
+
 #scroll-top {
   position: fixed; bottom: 32px; right: 24px; z-index: 900;
   width: 44px; height: 44px; border-radius: 12px;
@@ -711,12 +675,7 @@ footer {
 #scroll-top:hover { background: var(--red-dark); transform: translateY(-3px); }
 #scroll-top svg { width: 18px; height: 18px; }
 
-/* ============================================================
-   RESPONSIVE
-   ============================================================ */
-/* ============================================================
-   TABLET  (≤ 1024px)
-   ============================================================ */
+
 @media (max-width: 1024px) {
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .list-manager-inner { grid-template-columns: 1fr; gap: 40px; }
@@ -724,9 +683,7 @@ footer {
   .nav-links a { font-size: 0.72rem; padding: 5px 7px; }
 }
 
-/* ============================================================
-   MOBILE  (≤ 768px)
-   ============================================================ */
+
 /* --- NAV BASE --- */
 @media (max-width: 768px) {
   :root { --nav-h: 64px; }
@@ -744,7 +701,7 @@ footer {
     order: 2;
   }
 
-  /* 3. زر اللغة (مدمج بجانب البحث) */
+  
   .lang-toggle { 
     display: flex !important; 
     order: 3;
@@ -761,7 +718,7 @@ footer {
     order: 1; 
     padding: 6px; 
     background: transparent; 
-    color: var(--green); /* جعل أيقونة السلة خضراء كما طلبت */
+    color: var(--green); 
   }
 
   /* Cart button: compact on mobile */
@@ -810,9 +767,7 @@ footer {
   .footer-bottom { flex-direction: column; text-align: center; gap: 8px; }
 }
 
-/* ============================================================
-   SMALL MOBILE  (≤ 400px)
-   ============================================================ */
+
 @media (max-width: 400px) {
   .container { width: 95%; }
   .product-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
@@ -822,9 +777,7 @@ footer {
   .hero-stats { flex-direction: column; gap: 10px; align-items: center; }
 }
 
-/* ============================================================
-   LANGUAGE TOGGLE (AR/FR)
-   ============================================================ */
+
 .lang-toggle {
   display: flex; align-items: center; gap: 4px;
   background: var(--cream); border: 1.5px solid var(--gold-light);
@@ -841,11 +794,7 @@ footer {
   color: white; box-shadow: 0 2px 8px rgba(197,160,89,0.35);
 }
 
-/* ============================================================
-   LIVE SEARCH BAR — EXPANDING ICON (ZERO LAYOUT SHIFT)
-   ============================================================ */
 
-/* Wrapper: stays in flow, input escapes it absolutely */
 .search-wrap {
   position: relative;
   display: flex;
@@ -853,10 +802,10 @@ footer {
   flex-shrink: 0;
 }
 
-/* Hide inline SVG — background-image handles the icon */
+
 .search-wrap .search-icon { display: none; }
 
-/* Shared base for all breakpoints */
+
 #search-input {
   font-family: 'Tajawal', sans-serif;
   outline: none;
@@ -867,10 +816,9 @@ footer {
 }
 [data-theme="dark"] #search-input { color: #F0EDE8; }
 
-/* Placeholder */
+
 #search-input::placeholder { color: var(--gray-500); opacity: 1; }
 
-/* ── DESKTOP (≥ 992px) ── */
 @media (min-width: 992px) {
   /* Anchor wrapper */
   .search-wrap { width: 40px; height: 40px; }
@@ -900,10 +848,9 @@ footer {
       border-radius   0.3s ease;
   }
 
-  /* RTL (AR) — expands leftward */
   html[dir="rtl"] #search-input { right: 0; left: auto; }
 
-  /* LTR (FR) — expands rightward, away from lang toggle */
+ 
   html[dir="ltr"] #search-input { left: 0; right: auto; }
 
   #search-input:focus {
@@ -933,7 +880,7 @@ footer {
   }
 }
 
-/* ── MOBILE (≤ 768px) ── */
+
 @media (max-width: 768px) {
   .search-wrap { width: 36px; height: 36px; }
 
@@ -1058,11 +1005,8 @@ footer {
   .lang-toggle { display: flex!important; }
 }
 
-/* ============================================================
-   DARK MODE — PREMIUM LUXURY THEME
-   ============================================================ */
 
-/* — Dark mode CSS variable overrides — */
+/* — Dark mode  — */
 [data-theme="dark"] {
   --white:      #121212;
   --off-white:  #1A1A1A;
@@ -1077,7 +1021,7 @@ footer {
   --gold-glow:  #C5A05960;
 }
 
-/* — Smooth theme transition on all key surfaces — */
+
 body,
 #navbar,
 .mobile-nav,
@@ -1205,9 +1149,7 @@ body,
 /* — Hero stats border dark — */
 [data-theme="dark"] .hero-stats { border-top-color: #2A2A2A; }
 
-/* ============================================================
-   DARK MODE TOGGLE BUTTON — Desktop (Navbar)
-   ============================================================ */
+
 #dark-toggle-desktop {
   display: flex;
   align-items: center;
@@ -1246,9 +1188,7 @@ body,
 [data-theme="dark"] .toggle-icon-sun  { opacity: 0; transform: rotate(-90deg) scale(0.5); }
 [data-theme="dark"] .toggle-icon-moon { opacity: 1; transform: rotate(0deg) scale(1); }
 
-/* ============================================================
-   DARK MODE TOGGLE — Mobile (inside mobile nav)
-   ============================================================ */
+
 .mobile-dark-toggle-row {
   display: flex;
   align-items: center;
@@ -1306,7 +1246,6 @@ body,
 
 <body>
 
-<!-- ============================== NAVBAR ============================== -->
 <nav id="navbar" role="navigation" aria-label="Main navigation">
   <div class="container nav-inner">
 
@@ -1398,7 +1337,7 @@ body,
   <a href="#list-manager" onclick="closeMobileNav()" data-mob-ar="📋 قائمتي"                 data-mob-fr="📋 Mon Panier">📋 قائمتي</a>
 </div>
 
-<!-- ============================== HERO ============================== -->
+
 <section id="hero" role="banner">
   <div class="container hero-inner">
 
@@ -1452,7 +1391,6 @@ body,
   </div>
 </section>
 
-<!-- ============================== MARQUEE ============================== -->
 <div class="marquee-ribbon" aria-hidden="true">
   <div class="marquee-track">
     <span class="marquee-item"><span class="dot"></span>الشوكولاطة الفاخرة</span>
@@ -1472,7 +1410,7 @@ body,
   </div>
 </div>
 
-<!-- ============================== SECTION 1: CHOCOLAT ============================== -->
+
 <section id="choco" class="product-section">
   <div class="container">
     <div class="section-header" data-aos="fade-up">
@@ -1593,7 +1531,7 @@ body,
   </div>
 </section>
 
-<!-- ============================== SECTION 2: FROMAGE ============================== -->
+
 <section id="fromage" class="product-section">
   <div class="container">
     <div class="section-header" data-aos="fade-up">
@@ -1713,7 +1651,7 @@ body,
   </div>
 </section>
 
-<!-- ============================== SECTION 3: CAFE ============================== -->
+
 <section id="cafe" class="product-section">
   <div class="container">
     <div class="section-header" data-aos="fade-up">
@@ -1834,7 +1772,6 @@ body,
   </div>
 </section>
 
-<!-- ============================== SECTION 4: NETTOYAGE ============================== -->
 <section id="nettoyage" class="product-section">
   <div class="container">
     <div class="section-header" data-aos="fade-up">
@@ -1954,7 +1891,6 @@ body,
   </div>
 </section>
 
-<!-- ============================== SECTION 5: BOISSONS ============================== -->
 <section id="boissons" class="product-section">
   <div class="container">
     <div class="section-header" data-aos="fade-up">
@@ -2075,7 +2011,7 @@ body,
   </div>
 </section>
 
-<!-- ============================== SECTION 6: CONSERVES ============================== -->
+
 <section id="conserves" class="product-section">
   <div class="container">
     <div class="section-header" data-aos="fade-up">
@@ -2196,7 +2132,7 @@ body,
   </div>
 </section>
 
-<!-- ============================== TESTIMONIALS ============================== -->
+
 <section id="testimonials">
   <div class="container">
     <div class="section-header" data-aos="fade-up">
@@ -2294,7 +2230,6 @@ body,
   </div>
 </section>
 
-<!-- ============================== LIST MANAGER ============================== -->
 <section id="list-manager">
   <div class="container list-manager-inner">
 
@@ -2350,7 +2285,7 @@ body,
   </div>
 </section>
 
-<!-- ============================== FOOTER ============================== -->
+
 <footer>
   <div class="container">
     <div class="footer-grid">
@@ -2448,27 +2383,18 @@ body,
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
 <script>
-/* ============================================================
-   CONFIGURATION
-   ============================================================ */
+
 const IG_HANDLE = 'superette_le_printemps';
 const IG_URL    = 'https://www.instagram.com/' + IG_HANDLE + '/';
 
-/* ============================================================
-   AOS
-   ============================================================ */
 AOS.init({ duration: 750, easing: 'ease-out-cubic', once: true, offset: 60 });
 
-/* ============================================================
-   CART STATE
-   ============================================================ */
+
 // cart = [ { id, name, price, priceNum, qty } ]
 let cart = [];
 let currentLang = 'ar';
 
-/* ============================================================
-   NAVBAR
-   ============================================================ */
+
 const navbar    = document.getElementById('navbar');
 const scrollTop = document.getElementById('scroll-top');
 
@@ -2482,15 +2408,11 @@ window.addEventListener('scroll', () => {
   }
 }, { passive: true });
 
-/* ============================================================
-   MOBILE NAV
-   ============================================================ */
+
 function toggleMobileNav() { document.getElementById('mobile-nav').classList.toggle('open'); }
 function closeMobileNav()   { document.getElementById('mobile-nav').classList.remove('open'); }
 
-/* ============================================================
-   SCROLL TO CART
-   ============================================================ */
+
 function scrollToCart() {
   document.getElementById('list-manager').scrollIntoView({ behavior: 'smooth' });
 }
@@ -2960,9 +2882,7 @@ function setLang(lang) {
   updateCartUI();
 }
 
-/* ============================================================
-   LIVE SEARCH
-   ============================================================ */
+
 function liveSearch(query) {
   const q = query.trim().toLowerCase();
   let visibleCount = 0;
@@ -2993,18 +2913,14 @@ function liveSearch(query) {
   });
 }
 
-/* ============================================================
-   PARSE PRICE
-   ============================================================ */
+
 function parsePrice(priceStr) {
   // "1800 دج" or "450 دج" — extract number
   const match = priceStr.match(/[\d,]+/);
   return match ? parseInt(match[0].replace(',','')) : 0;
 }
 
-/* ============================================================
-   ADD TO CART  (smart qty – no duplicates)
-   ============================================================ */
+
 function addToCart(name, price, btn) {
   const existing = cart.find(i => i.name === name);
   const t = TRANSLATIONS[currentLang];
@@ -3035,9 +2951,7 @@ function addToCart(name, price, btn) {
   countEl.classList.add('bump');
 }
 
-/* ============================================================
-   CHANGE QTY
-   ============================================================ */
+
 function changeQty(id, delta) {
   const item = cart.find(i => i.id === id);
   if (!item) return;
@@ -3049,9 +2963,7 @@ function changeQty(id, delta) {
   updateCartUI();
 }
 
-/* ============================================================
-   REMOVE FROM CART
-   ============================================================ */
+
 function removeFromCart(id) {
   const item = cart.find(i => i.id === id);
   cart = cart.filter(i => i.id !== id);
@@ -3075,9 +2987,7 @@ function removeFromCart(id) {
   showToast(currentLang === 'fr' ? '🗑️ Produit retiré.' : '🗑️ تمت إزالة المنتج.', 'gold');
 }
 
-/* ============================================================
-   CLEAR CART
-   ============================================================ */
+
 function clearCart() {
   if (!cart.length) return;
   cart = [];
@@ -3093,9 +3003,7 @@ function clearCart() {
   showToast(currentLang === 'fr' ? '🗑️ Panier vidé.' : '🗑️ تم مسح القائمة.', 'gold');
 }
 
-/* ============================================================
-   UPDATE CART UI
-   ============================================================ */
+
 function updateCartUI() {
   const t       = TRANSLATIONS[currentLang];
   const count   = cart.reduce((s, i) => s + i.qty, 0);
@@ -3138,9 +3046,7 @@ function updateCartUI() {
   }
 }
 
-/* ============================================================
-   SEND VIA INSTAGRAM  (advanced clipboard)
-   ============================================================ */
+
 function sendViaInstagram() {
   if (!cart.length) return;
   const t     = TRANSLATIONS[currentLang];
@@ -3171,9 +3077,6 @@ function sendViaInstagram() {
   });
 }
 
-/* ============================================================
-   TOAST
-   ============================================================ */
 let _toastTimer;
 function showToast(msg, type = 'green') {
   const toast = document.getElementById('toast');
@@ -3184,9 +3087,7 @@ function showToast(msg, type = 'green') {
   _toastTimer = setTimeout(() => toast.classList.remove('show'), 3200);
 }
 
-/* ============================================================
-   ACTIVE NAV ON SCROLL
-   ============================================================ */
+
 const _sections  = document.querySelectorAll('section[id]');
 const _navLinks  = document.querySelectorAll('.nav-links a');
 
@@ -3210,9 +3111,7 @@ new IntersectionObserver((entries) => {
   }, { threshold: 0.3 }).observe(s)
 );
 
-/* ============================================================
-   GOLD FLASH SCROLL
-   ============================================================ */
+
 new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) entry.target.classList.add('aos-animate');
@@ -3225,16 +3124,12 @@ new IntersectionObserver((entries) => {
     )
   : null;
 
-/* ============================================================
-   SCROLL TO TOP
-   ============================================================ */
+
 document.getElementById('scroll-top').addEventListener('click', () =>
   window.scrollTo({ top: 0, behavior: 'smooth' })
 );
 
-/* ============================================================
-   DARK MODE — TOGGLE + PERSISTENCE
-   ============================================================ */
+
 (function initDarkMode() {
   const saved = localStorage.getItem('lp-theme');
   if (saved === 'dark') {
